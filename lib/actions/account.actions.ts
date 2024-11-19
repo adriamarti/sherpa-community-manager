@@ -35,7 +35,7 @@ export async function getAccountById(accountId: string) {
 }
 
 // UPDATE
-export async function updateUser(
+export async function updateAccount(
   clerkId: string,
   account: UpdateAccountParams
 ) {
