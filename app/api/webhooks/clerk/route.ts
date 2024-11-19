@@ -59,8 +59,6 @@ export async function POST(req: Request) {
   const { id } = evt.data;
   const eventType = evt.type;
 
-  console.log(evt);
-
   // CREATE
   if (eventType === 'user.created') {
     const { id, email_addresses, image_url, first_name, last_name, username } =
@@ -69,14 +67,11 @@ export async function POST(req: Request) {
     const account = {
       clerkId: id,
       email: email_addresses[0].email_address,
-      username: username!,
+      userName: username!,
       firstName: first_name!,
       lastName: last_name!,
       photo: image_url,
     };
-
-    console.log('ACCOUNT DATA:');
-    console.log(account);
 
     const newAccount = await createAccount(account);
 
@@ -98,7 +93,7 @@ export async function POST(req: Request) {
     const { id, image_url, first_name, last_name, username } = evt.data;
 
     const account = {
-      username: username!,
+      userName: username!,
       firstName: first_name!,
       lastName: last_name!,
       photo: image_url,
