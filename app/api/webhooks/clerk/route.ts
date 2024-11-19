@@ -69,11 +69,14 @@ export async function POST(req: Request) {
     const account = {
       clerkId: id,
       email: email_addresses[0].email_address,
-      username: username || '',
-      firstName: first_name || '',
-      lastName: last_name || '',
+      username: username!,
+      firstName: first_name!,
+      lastName: last_name!,
       photo: image_url,
     };
+
+    console.log('ACCOUNT DATA:');
+    console.log(account);
 
     const newAccount = await createAccount(account);
 
@@ -95,9 +98,9 @@ export async function POST(req: Request) {
     const { id, image_url, first_name, last_name, username } = evt.data;
 
     const account = {
-      firstName: first_name || '',
-      lastName: last_name || '',
-      username: username || '',
+      username: username!,
+      firstName: first_name!,
+      lastName: last_name!,
       photo: image_url,
     };
 
