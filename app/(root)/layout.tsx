@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import AppHeader from '../components/shared/AppHeader';
+import AppHeader from '@/components/shared/AppHeader';
 
 interface RootLayoutProps {
   children: ReactNode;
