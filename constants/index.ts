@@ -1,3 +1,10 @@
+export const homeNavigation = [
+  { label: 'Home', href: '/#' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Integrations', href: '/#integrations' },
+  { label: 'FAQs', href: '/#faqs' },
+];
+
 export const navigation = [
   {
     title: 'Platform',

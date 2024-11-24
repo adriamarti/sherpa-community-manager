@@ -1,7 +1,16 @@
+// Components
+import NavBar from '@/components/shared/NavBar';
+import Hero from '@/sections/Hero';
+import LogoTicker from '@/sections/LogoTicker';
+import Introduction from '@/sections/Introduction';
+
 export default function RootPage() {
   return (
-    <div className='min-h-screen flex items-center justify-center'>
-      <main className='w-full max-w-md p-6'>Home Page</main>
-    </div>
+    <>
+      <NavBar />
+      <Hero />
+      <LogoTicker />
+      <Introduction />
+    </>
   );
 }
