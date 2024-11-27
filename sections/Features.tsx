@@ -29,9 +29,9 @@ export default function Features() {
       <div className='container'>
         <div className='flex flex-col justify-center max-w-2xl'>
           <SectionTag>Features</SectionTag>
-          <h3 className='text-6xl font-medium text-center mt-6 text-white'>
+          <h2 className='text-6xl font-medium text-center mt-6 text-white'>
             Where power meets <span className='text-lime-400'>simplicity</span>
-          </h3>
+          </h2>
           <div className='mt-12 grid grid-cols-1 md:grid-cols-4 gap-8'>
             <FeatureCard
               title='Real-time data'

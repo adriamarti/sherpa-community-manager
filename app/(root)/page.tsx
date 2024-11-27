@@ -5,6 +5,7 @@ import LogoTicker from '@/sections/LogoTicker';
 import Introduction from '@/sections/Introduction';
 import Features from '@/sections/Features';
 import Integrations from '@/sections/Integrations';
+import Faqs from '@/sections/Faqs';
 
 export default function RootPage() {
   return (
@@ -15,6 +16,7 @@ export default function RootPage() {
       <Introduction />
       <Features />
       <Integrations />
+      <Faqs />
     </>
   );
 }
