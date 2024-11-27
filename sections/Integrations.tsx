@@ -47,7 +47,7 @@ export default function Integrations() {
   return (
     <section className='py-24 overflow-hidden px-8'>
       <div className='container'>
-        <div className='grid lg:grid-cols-2 items-center lg:gap-16'>
+        <div className='grid lg:grid-cols-2 items-center lg:gap-16 max-w-7xl'>
           <div>
             <SectionTag>Integrations</SectionTag>
             <h2 className='text-6xl font-medium mt-6 text-white'>

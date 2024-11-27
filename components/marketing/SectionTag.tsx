@@ -12,7 +12,7 @@ export default function SectionTag(props: HTMLAttributes<HTMLHeadingElement>) {
       )}
       {...otherProps}
     >
-      {children}
+      &#10038; {children}
     </h5>
   );
 }

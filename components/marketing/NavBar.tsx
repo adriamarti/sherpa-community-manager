@@ -23,7 +23,7 @@ export default function NavBar() {
               <Link
                 key={href}
                 href={href}
-                className='text-white/70 hover:text-white px-4'
+                className='text-white/50 hover:text-white px-4'
               >
                 {label}
               </Link>

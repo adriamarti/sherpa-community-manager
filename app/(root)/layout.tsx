@@ -6,7 +6,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className='min-h-screen w-full bg-black flex flex-col flex-start items-center'>
+    <div className='min-h-screen w-full bg-black flex flex-col flex-start items-center overflow-x-clip'>
       {children}
     </div>
   );
