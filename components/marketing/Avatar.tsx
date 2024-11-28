@@ -1,14 +1,8 @@
 import { HTMLAttributes } from 'react';
-import Image, { StaticImageData } from 'next/image';
 import { twMerge } from 'tailwind-merge';
 
-interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
-  imageSrc: StaticImageData;
-  imageAlt: string;
-}
-
-export default function Avatar(props: AvatarProps) {
-  const { className, children, imageSrc, imageAlt, ...otherProps } = props;
+export default function Avatar(props: HTMLAttributes<HTMLDivElement>) {
+  const { className, children, ...otherProps } = props;
 
   return (
     <div
@@ -18,7 +12,6 @@ export default function Avatar(props: AvatarProps) {
       )}
       {...otherProps}
     >
-      <Image className='rounded-full' src={imageSrc} alt={imageAlt} />
       {children}
     </div>
   );
