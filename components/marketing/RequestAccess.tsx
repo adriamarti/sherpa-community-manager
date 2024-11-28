@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+// Components
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -12,7 +14,9 @@ import {
   FormItem,
   FormMessage,
 } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+
+// Library
+import { createEarlyAccess } from '@/lib/actions/early-access.actions';
 
 const formSchema = z.object({
   email: z.string().email({
@@ -21,6 +25,7 @@ const formSchema = z.object({
 });
 
 export default function RequestAccess() {
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -28,29 +33,52 @@ export default function RequestAccess() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      await createEarlyAccess(values);
+    } catch (err) {
+      if (
+        err instanceof Error &&
+        err.message.includes('E11000 duplicate key error')
+      ) {
+        setErrorMessage('This email is already registered for early access');
+      } else {
+        setErrorMessage('Something went wrong. Please try again later.');
+      }
+      form.reset({ email: '' });
+      (document.activeElement as HTMLElement)?.blur();
+    }
+  };
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex border border-white/15 rounded-full p-2 mt-8 relative'
+        className='flex border border-white/15 focus-within:border-white/30 rounded-full p-2 mt-8 relative'
       >
         <FormField
           control={form.control}
           name='email'
           render={({ field }) => (
-            <FormItem className='flex items-center'>
-              <FormControl className='flex items-center'>
+            <FormItem className='flex items-center bg-transparent'>
+              <FormControl className='flex items-center bg-transparent'>
                 <input
                   {...field}
                   placeholder='paradiso@gruplaconfiteria.com'
                   className='bg-transparent px-4 border-none focus:border-none hover:border-none outline-none focus:outline-none text-white w-full md:min-w-[350px]'
+                  onChange={(e) => {
+                    field.onChange(e);
+                    setErrorMessage(null);
+                  }}
                 />
               </FormControl>
-              <FormMessage className='absolute -bottom-8 text-lime-400' />
+              <div className='absolute -bottom-8'>
+                {errorMessage ? (
+                  <span className='text-lime-400 text-sm'>{errorMessage}</span>
+                ) : (
+                  <FormMessage className='text-lime-400' />
+                )}
+              </div>
             </FormItem>
           )}
         />

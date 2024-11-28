@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-unused-vars */
 
+// ====== EARLY ACCESS PARAMS
+declare type EarlyAccessParams = {
+  email: string;
+};
+
 // ====== USER PARAMS
 declare type CreateAccountParams = {
   clerkId: string;
