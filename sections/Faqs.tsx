@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+import { AnimatePresence, motion } from 'framer-motion';
+
 // Components
 import SectionTag from '@/components/marketing/SectionTag';
-import { twMerge } from 'tailwind-merge';
 
 const faqs = [
   {
@@ -31,7 +36,8 @@ const faqs = [
 ];
 
 export default function Faqs() {
-  const selectedIndex = 0;
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <section className='py-24 px-8'>
       <div className='container'>
@@ -45,7 +51,8 @@ export default function Faqs() {
             {faqs.map(({ question, answer }, index) => (
               <div
                 key={question}
-                className='bg-neutral-900 rounded-2xl border border-white/10 p-6'
+                className='bg-neutral-900 rounded-2xl border border-white/10 p-6 cursor-pointer hover:border-white/20'
+                onClick={() => setSelectedIndex(index)}
               >
                 <div className='flex justify-between items-center gap-3'>
                   <h3 className='font-medium text-white'>{question}</h3>
@@ -60,7 +67,7 @@ export default function Faqs() {
                     strokeLinecap='round'
                     strokeLinejoin='round'
                     className={twMerge(
-                      'feather feather-plus text-lime-400 flex-shrink-0',
+                      'feather feather-plus text-lime-400 flex-shrink-0 transition duration-300',
                       selectedIndex === index && 'rotate-45'
                     )}
                   >
@@ -68,14 +75,18 @@ export default function Faqs() {
                     <line x1='5' y1='12' x2='19' y2='12'></line>
                   </svg>
                 </div>
-                <div
-                  className={twMerge(
-                    'mt-6',
-                    selectedIndex !== index && 'hidden'
+                <AnimatePresence>
+                  {selectedIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, marginTop: 0 }}
+                      animate={{ height: 'auto', marginTop: 24 }}
+                      exit={{ height: 0, marginTop: 0 }}
+                      className='mt-6 overflow-hidden'
+                    >
+                      <p className='text-white/50'>{answer}</p>
+                    </motion.div>
                   )}
-                >
-                  <p className='text-white/50'>{answer}</p>
-                </div>
+                </AnimatePresence>
               </div>
             ))}
           </div>
