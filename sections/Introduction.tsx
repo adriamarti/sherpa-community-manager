@@ -26,7 +26,6 @@ export default function Introduction() {
 
   useEffect(() => {
     wordIndex.on('change', (latest) => {
-      console.log(latest);
       setCurrentWord(latest);
     });
   }, [wordIndex]);

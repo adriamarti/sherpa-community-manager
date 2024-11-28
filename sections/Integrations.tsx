@@ -47,7 +47,7 @@ export default function Integrations() {
   return (
     <section className='py-24 overflow-hidden px-8'>
       <div className='container'>
-        <div className='grid lg:grid-cols-2 items-center lg:gap-16 max-w-7xl'>
+        <div className='grid lg:grid-cols-2 items-center lg:gap-16 max-w-6xl'>
           <div>
             <SectionTag>Integrations</SectionTag>
             <h2 className='text-6xl font-medium mt-6 text-white'>
@@ -66,6 +66,7 @@ export default function Integrations() {
               <IntegrationsCol
                 integrations={integrations.slice().reverse()}
                 className='hidden md:flex'
+                reverse
               />
             </div>
           </div>
