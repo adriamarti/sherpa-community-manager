@@ -51,7 +51,7 @@ export default function Faqs() {
             {faqs.map(({ question, answer }, index) => (
               <div
                 key={question}
-                className='bg-neutral-900 rounded-2xl border border-white/10 p-6 cursor-pointer hover:border-white/20'
+                className='bg-neutral-900 rounded-2xl border border-white/10 p-6 cursor-pointer hover:border-white/30'
                 onClick={() => setSelectedIndex(index)}
               >
                 <div className='flex justify-between items-center gap-3'>
