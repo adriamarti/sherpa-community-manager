@@ -1,5 +1,8 @@
 'use client';
 
+// Components
+import RequestAccess from '@/components/marketing/RequestAccess';
+
 export default function Hero() {
   return (
     <section className='container py-24 px-8'>
@@ -15,6 +18,7 @@ export default function Hero() {
           analysis, automated responses, and actionable insights to improve your
           business reputation.
         </p>
+        <RequestAccess />
       </div>
     </section>
   );
