@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Mediador Social Sherpa',
+  title: 'HagerSuite',
   description:
     'Plataforma de moderación de redes sociales impulsada por IA que ayuda a las empresas a gestionar contenido e interactuar con seguidores de manera eficiente y segura',
 };

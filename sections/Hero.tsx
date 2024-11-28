@@ -5,7 +5,7 @@ import RequestAccess from '@/components/marketing/RequestAccess';
 
 export default function Hero() {
   return (
-    <section className='container py-24 px-8'>
+    <section className='container pt-48 pb-24 px-8'>
       <div className='flex flex-col justify-center items-center'>
         <div className='inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full text-neutral-950 font-semibold'>
           All In One

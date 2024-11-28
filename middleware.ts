@@ -1,6 +1,12 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-const pages = ['/', '/sign-in(.*)', '/sign-up(.*)'];
+const pages = [
+  '/',
+  '/terms-and-conditions',
+  '/privacy-policy',
+  '/sign-in(.*)',
+  '/sign-up(.*)',
+];
 const endpoints = ['/api/webhooks/clerk'];
 
 const isPublicRoute = createRouteMatcher([...pages, ...endpoints]);
