@@ -29,7 +29,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section className='py-24 px-8'>
+    <section id='features' className='py-24 px-8'>
       <div className='container'>
         <div className='flex flex-col justify-center max-w-2xl'>
           <SectionTag>Features</SectionTag>
