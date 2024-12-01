@@ -29,7 +29,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id='funcionalidades' className='py-18 md:py-24 px-8'>
+    <section id='funcionalidades' className='py-18 md:py-24 px-4 md:px-6'>
       <div className='container'>
         <div className='flex flex-col justify-center max-w-4xl'>
           <SectionTag>Funcionalidades</SectionTag>
@@ -83,24 +83,24 @@ export default function Features() {
               </div>
             </FeatureCard>
             <FeatureCard
-              title='AI guidance'
-              description='Let our AI-powered platform guide you in crafting personalized
-                  responses, analyzing sentiment patterns, and identifying key
-                  areas for improvement in your customer feedback.'
+              title='Guía con IA'
+              description='Deja que nuestra plataforma impulsada por IA te guíe en la creación de
+                  respuestas personalizadas, analizando sentimientos e identificando áreas
+                  clave de mejora en los comentarios de tus clientes.'
               className='col-span-2 group'
             >
               <div className='aspect-video flex items-center justify-center'>
                 <p className='text-4xl group-hover:text-black/10 text-center transition duration-500'>
-                  Smart AI for{' '}
+                  IA Inteligente para{' '}
                   <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent relative'>
-                    <span>better</span>
+                    <span>mejores</span>
                     <Image
                       className='absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 pointer-events-none transition duration-500'
                       src={giphy}
-                      alt='better'
+                      alt='mejores'
                     />
                   </span>{' '}
-                  business results
+                  resultados de negocio
                 </p>
               </div>
             </FeatureCard>

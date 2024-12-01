@@ -31,7 +31,7 @@ export default function Introduction() {
   }, [wordIndex]);
 
   return (
-    <section className='py-28 px-8'>
+    <section className='py-28 px-4 md:px-6'>
       <div className='container'>
         {/* This allows the page to get stucked and animate text-color (maybe you should change the "top-*" if the text is shorter or longer) */}
         <div className='sticky top-[10%] md:top-[20%]'>

@@ -30,7 +30,7 @@ export default function Faqs() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <section id='preguntas-frequentes' className='py-24 px-8'>
+    <section id='preguntas-frequentes' className='py-24 px-4 md:px-6'>
       <div className='container'>
         <div className='flex flex-col justify-center max-w-2xl'>
           <SectionTag>Faqs</SectionTag>

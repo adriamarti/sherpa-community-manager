@@ -51,7 +51,7 @@ const integrations = [
 
 export default function Integrations() {
   return (
-    <section id='integraciones' className='py-24 overflow-hidden px-8'>
+    <section id='integraciones' className='py-24 overflow-hidden px-4 md:px-6'>
       <div className='container'>
         <div className='grid lg:grid-cols-2 items-center lg:gap-16 max-w-6xl'>
           <div>
