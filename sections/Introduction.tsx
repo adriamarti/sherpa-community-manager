@@ -34,7 +34,7 @@ export default function Introduction() {
     <section className='py-28 px-8'>
       <div className='container'>
         {/* This allows the page to get stucked and animate text-color (maybe you should change the "top-*" if the text is shorter or longer) */}
-        <div className='sticky top-24: md:top-56'>
+        <div className='sticky top-[10%] md:top-[20%]'>
           <div className='flex flex-col justify-center max-w-2xl'>
             <SectionTag>Introduciendo HagenSuite</SectionTag>
             <p className='text-2xl md:text-4xl text-center font-medium mt-10'>

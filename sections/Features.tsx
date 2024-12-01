@@ -29,11 +29,11 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id='funcionalidades' className='py-24 px-8'>
+    <section id='funcionalidades' className='py-18 md:py-24 px-8'>
       <div className='container'>
         <div className='flex flex-col justify-center max-w-4xl'>
           <SectionTag>Funcionalidades</SectionTag>
-          <h2 className='text-6xl font-medium text-center mt-6 font-display'>
+          <h2 className='text-4xl md:text-6xl font-medium text-center mt-6 font-display'>
             Funcionalidades que{' '}
             <span className='text-lime-500'>transforman</span> tu negocio
           </h2>

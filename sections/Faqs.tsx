@@ -34,7 +34,7 @@ export default function Faqs() {
       <div className='container'>
         <div className='flex flex-col justify-center max-w-2xl'>
           <SectionTag>Faqs</SectionTag>
-          <h2 className='text-6xl font-medium text-center mt-6 font-display'>
+          <h2 className='text-4xl md:text-6xl font-medium text-center mt-6 font-display'>
             ¿Preguntas? Tenemos{' '}
             <span className='text-lime-400'>respuestas</span>
           </h2>

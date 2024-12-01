@@ -56,7 +56,7 @@ export default function Integrations() {
         <div className='grid lg:grid-cols-2 items-center lg:gap-16 max-w-6xl'>
           <div>
             <SectionTag>Integraciones</SectionTag>
-            <h2 className='text-6xl font-medium mt-6 font-display'>
+            <h2 className='text-4xl md:text-6xl font-medium mt-6 font-display'>
               Donde el poder se une a la{' '}
               <span className='text-lime-400'>simplicidad</span>
             </h2>

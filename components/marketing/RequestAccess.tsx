@@ -59,7 +59,7 @@ export default function RequestAccess() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex flex-row gap-4 border ring-offset-background bg-white focus-within:border-black/30 p-4 mt-8 relative rounded-md max-w-2xl w-full'
+        className='flex flex-col md:flex-row gap-4 border ring-offset-background bg-white focus-within:border-black/30 p-4 mt-8 relative rounded-md max-w-2xl w-full'
       >
         <FormField
           control={form.control}

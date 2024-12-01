@@ -22,18 +22,21 @@ export default function CallToAction() {
   }, [isHovered]);
 
   return (
-    <section className='py-24'>
+    <section className='pb-24'>
       <Link href='#access'>
-        <div className='overflow-x-clip p-4 flex'>
+        <div className='overflow-x-clip flex'>
           <motion.div
             ref={scope}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className='flex flex-none gap-16 pr-16 text-7xl md:text-8xl cursor-pointer group'
+            className='flex flex-none gap-12 md:gap-16 pr-12 md:pr-16 text-7xl md:text-8xl cursor-pointer group'
           >
             {Array.from({ length: 10 }).map((_, index) => (
-              <div key={index} className='flex items-center gap-16'>
-                <span className='text-lime-400 text-7xl'>&#10038;</span>
+              <div
+                key={index}
+                className='flex items-center gap-16 text-3xl md:text-6xl lg:text-7xl'
+              >
+                <span className='text-lime-400 '>&#10038;</span>
                 <span className='text-black group-hover:text-lime-400'>
                   Accede antes que nadie
                 </span>
