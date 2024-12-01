@@ -16,6 +16,10 @@ const geistMono = localFont({
   variable: '--font-geist-mono',
   weight: '100 900',
 });
+const yeseva = localFont({
+  src: './fonts/YesevaOne.woff',
+  variable: '--font-yeseva',
+});
 
 export const metadata: Metadata = {
   title: 'HagerSuite',
@@ -32,7 +36,7 @@ export default function RootLayout({
     <ClerkProvider afterSignOutUrl='/'>
       <html lang='en'>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${yeseva.variable} antialiased`}
         >
           {children}
         </body>

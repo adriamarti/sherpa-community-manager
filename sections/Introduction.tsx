@@ -8,7 +8,7 @@ import { twMerge } from 'tailwind-merge';
 import SectionTag from '@/components/marketing/SectionTag';
 
 const animatedText =
-  'Our AI-powered system analyzes sentiment, identifies key trends, and helps you craft personalized responses that resonate with your customers.';
+  'Nuestro sistema impulsado por IA analiza el sentimiento, identifica tendencias clave y te ayuda a crear respuestas personalizadas que conectan con tus clientes.';
 const animatedWords = animatedText.split(' ');
 
 export default function Introduction() {
@@ -36,18 +36,19 @@ export default function Introduction() {
         {/* This allows the page to get stucked and animate text-color (maybe you should change the "top-*" if the text is shorter or longer) */}
         <div className='sticky top-24: md:top-56'>
           <div className='flex flex-col justify-center max-w-2xl'>
-            <SectionTag>Introducing HagenSuite</SectionTag>
+            <SectionTag>Introduciendo HagenSuite</SectionTag>
             <p className='text-2xl md:text-4xl text-center font-medium mt-10'>
-              <span className='text-white'>
-                Elevate your online presence with HagenSuite, the all-in-one
-                solution for managing reviews across all major platforms.{' '}
+              <span>
+                Potencia tu presencia en línea con HagenSuite, la solución todo
+                en uno para gestionar reseñas en todas las plataformas
+                principales.{' '}
               </span>
               {animatedWords.map((word, index) => (
                 <span
                   key={index}
                   className={twMerge(
-                    'transition duration-500 text-white/15',
-                    index < currentWord && 'text-white'
+                    'transition duration-500 text-black/15',
+                    index < currentWord && 'text-black'
                   )}
                 >{`${word} `}</span>
               ))}
@@ -56,9 +57,9 @@ export default function Introduction() {
                 and helps you craft personalized responses that resonate with
                 your customers.
               </span> */}
-              <span className='text-lime-400'>
-                Take control of your reputation management and turn customer
-                feedback into actionable insights.
+              <span className='text-lime-500'>
+                Toma el control de la gestión de tu reputación y convierte los
+                comentarios de los clientes en información procesable.
               </span>
             </p>
           </div>

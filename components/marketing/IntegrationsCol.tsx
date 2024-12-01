@@ -31,13 +31,13 @@ export default function IntegrationsCol(props: IntegrationsColProps) {
           {integrations.map(({ name, icon, description }) => (
             <div
               key={name}
-              className='bg-neutral-900 border border-white/10 rounded-3xl p-6'
+              className='bg-white border border-black/10 p-6 rounded-xl'
             >
               <div className='flex justify-center'>
                 <Image src={icon} alt={name} className='size-24' />
               </div>
-              <h4 className='text-3xl text-center mt-6 text-white'>{name}</h4>
-              <p className='text-center mt-6 text-white/50 mt-2'>
+              <h4 className='text-2xl text-center mt-4'>{name}</h4>
+              <p className='text-center mt-6 text-black/50 mt-1 font-mono text-sm'>
                 {description}
               </p>
             </div>

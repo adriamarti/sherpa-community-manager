@@ -15,32 +15,32 @@ import FeatureCard from '@/components/marketing/FeatureCard';
 import Avatar from '@/components/marketing/Avatar';
 
 const FEATURES = [
-  'AI-Powered',
-  'Real-Time',
-  'Multi-Platform',
-  'Sentiment Analysis',
-  'Automated Responses',
-  'Analytics',
-  'Reputation Management',
-  'Customer Insights',
-  'Review Monitoring',
-  'Performance Tracking',
+  'Potenciado por IA',
+  'Tiempo Real',
+  'Multi-Plataforma',
+  'Análisis de Sentimiento',
+  'Respuestas Automatizadas',
+  'Analítica',
+  'Gestión de Reputación',
+  'Insights del Cliente',
+  'Monitoreo de Reseñas',
+  'Seguimiento del Rendimiento',
 ];
 
 export default function Features() {
   return (
-    <section id='features' className='py-24 px-8'>
+    <section id='funcionalidades' className='py-24 px-8'>
       <div className='container'>
-        <div className='flex flex-col justify-center max-w-2xl'>
-          <SectionTag>Features</SectionTag>
-          <h2 className='text-6xl font-medium text-center mt-6 text-white'>
-            Where power meets <span className='text-lime-400'>simplicity</span>
+        <div className='flex flex-col justify-center max-w-4xl'>
+          <SectionTag>Funcionalidades</SectionTag>
+          <h2 className='text-6xl font-medium text-center mt-6 font-display'>
+            Funcionalidades que{' '}
+            <span className='text-lime-500'>transforman</span> tu negocio
           </h2>
           <div className='mt-12 grid grid-cols-1 md:grid-cols-4 gap-8'>
             <FeatureCard
-              title='Real-time data'
-              description='Get instant access to reviews and ratings from all major
-                  platforms like Google, Yelp, and TripAdvisor as they come in.'
+              title='Mejore tu reputación'
+              description='Accede instantáneamente a todas las reseñas y menciones de tu negocio en las principales plataformas como Google, Yelp y TripAdvisor tan pronto como se publiquen.'
               className='col-span-2 group'
             >
               <div className='aspect-video flex flex-row items-center justify-center'>
@@ -66,7 +66,7 @@ export default function Features() {
                   />
                 </Avatar>
                 <Avatar className='border-transparent z-10 -ml-6 group-hover:border-green-500 transition'>
-                  <div className='size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1 relative'>
+                  <div className='size-full bg-neutral-300 rounded-full inline-flex items-center justify-center gap-1 relative'>
                     <Image
                       className='absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition top-0 left-0'
                       src={avatar4}
@@ -90,7 +90,7 @@ export default function Features() {
               className='col-span-2 group'
             >
               <div className='aspect-video flex items-center justify-center'>
-                <p className='text-4xl font-extrabold text-white/20 group-hover:text-white/10 text-center transition duration-500'>
+                <p className='text-4xl group-hover:text-black/10 text-center transition duration-500'>
                   Smart AI for{' '}
                   <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent relative'>
                     <span>better</span>
@@ -109,12 +109,14 @@ export default function Features() {
             {FEATURES.map((feature) => (
               <div
                 key={feature}
-                className='bg-neutral-900 border border-white/10 inline-flex px-3 py-1.5 rounded-2xl gap-1.5 items-center'
+                className='bg-white inline-flex px-3 py-1.5 rounded-2xl gap-1.5 items-center'
               >
                 <span className='bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-sm'>
                   &#10038;
                 </span>
-                <span className='font-medium text-white'>{feature}</span>
+                <span className='font-medium text-black text-sm font-mono'>
+                  {feature}
+                </span>
               </div>
             ))}
           </div>

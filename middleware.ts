@@ -2,8 +2,8 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
 const pages = [
   '/',
-  '/terms-and-conditions',
-  '/privacy-policy',
+  '/politicas-privacidad',
+  '/terminos-condiciones',
   '/sign-in(.*)',
   '/sign-up(.*)',
 ];

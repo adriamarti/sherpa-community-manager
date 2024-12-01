@@ -1,10 +1,10 @@
 // Assets
-import FigmaIcon from '@/app/assets/images/figma-logo.svg';
-import NotionIcon from '@/app/assets/images/notion-logo.svg';
-import SlackIcon from '@/app/assets/images/slack-logo.svg';
-import RelumeIcon from '@/app/assets/images/relume-logo.svg';
-import FramerIcon from '@/app/assets/images/framer-logo.svg';
-import GithubIcon from '@/app/assets/images/github-logo.svg';
+import GoogleLogo from '@/app/assets/images/integration-logo-google.svg';
+import FacebookLogo from '@/app/assets/images/integration-logo-facebook.svg';
+import InstagramLogo from '@/app/assets/images/integration-logo-instagram.svg';
+import TripAdvisorLogo from '@/app/assets/images/integration-logo-tripadvisor.svg';
+import XLogo from '@/app/assets/images/integration-logo-x.svg';
+import YelpLogo from '@/app/assets/images/integration-logo-yelp.svg';
 
 // Components
 import SectionTag from '@/components/marketing/SectionTag';
@@ -12,52 +12,58 @@ import IntegrationsCol from '@/components/marketing/IntegrationsCol';
 
 const integrations = [
   {
-    name: 'Figma',
-    icon: FigmaIcon,
-    description: 'Figma is a collaborative interface design tool.',
+    name: 'Google',
+    icon: GoogleLogo,
+    description:
+      'Google Reviews es una plataforma para reseñas y calificaciones de negocios.',
   },
   {
-    name: 'Notion',
-    icon: NotionIcon,
-    description: 'Notion is an all-in-one workspace for notes and docs.',
+    name: 'TripAdvisor',
+    icon: TripAdvisorLogo,
+    description:
+      'TripAdvisor es una plataforma de reseñas de viajes y restaurantes.',
   },
   {
-    name: 'Slack',
-    icon: SlackIcon,
-    description: 'Slack is a powerful team communication platform.',
+    name: 'Yelp',
+    icon: YelpLogo,
+    description:
+      'Yelp es una plataforma de reseñas y recomendaciones de negocios locales.',
   },
   {
-    name: 'Relume',
-    icon: RelumeIcon,
-    description: 'Relume is a no-code website builder and design system.',
+    name: 'X-Twitter',
+    icon: XLogo,
+    description:
+      'X (Twitter) es una red social para compartir opiniones sobre marcas.',
   },
   {
-    name: 'Framer',
-    icon: FramerIcon,
-    description: 'Framer is a professional website prototyping tool.',
+    name: 'Instagram',
+    icon: InstagramLogo,
+    description:
+      'Instagram es una red social visual para compartir fotos y opiniones.',
   },
   {
-    name: 'GitHub',
-    icon: GithubIcon,
-    description: 'GitHub is the leading platform for code collaboration.',
+    name: 'Facebook',
+    icon: FacebookLogo,
+    description:
+      'Facebook es una red social para compartir reseñas y experiencias sobre negocios.',
   },
 ];
 
 export default function Integrations() {
   return (
-    <section id='integrations' className='py-24 overflow-hidden px-8'>
+    <section id='integraciones' className='py-24 overflow-hidden px-8'>
       <div className='container'>
         <div className='grid lg:grid-cols-2 items-center lg:gap-16 max-w-6xl'>
           <div>
-            <SectionTag>Integrations</SectionTag>
-            <h2 className='text-6xl font-medium mt-6 text-white'>
-              Where power meets{' '}
-              <span className='text-lime-400'>simplicity</span>
+            <SectionTag>Integraciones</SectionTag>
+            <h2 className='text-6xl font-medium mt-6 font-display'>
+              Donde el poder se une a la{' '}
+              <span className='text-lime-400'>simplicidad</span>
             </h2>
-            <p className='text-lg text-white/50 mt-4'>
-              Seamlessly connect with your favorite tools and platforms. Our
-              integrations make it easy to incorporate Layers into your existing
-              workflow.
+            <p className='text-lg text-black/50 mt-4'>
+              Conéctate sin problemas con tus herramientas y plataformas
+              favoritas. Nuestras integraciones facilitan la incorporación de
+              HagenSuite a tu flujo de trabajo existente.
             </p>
           </div>
           <div>

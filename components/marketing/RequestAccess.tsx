@@ -14,13 +14,14 @@ import {
   FormItem,
   FormMessage,
 } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 
 // Library
 import { createEarlyAccess } from '@/lib/actions/early-access.actions';
 
 const formSchema = z.object({
   email: z.string().email({
-    message: 'Please enter a valid email address',
+    message: 'Por favor ingresa una dirección de correo electrónico válida',
   }),
 });
 
@@ -41,9 +42,13 @@ export default function RequestAccess() {
         err instanceof Error &&
         err.message.includes('E11000 duplicate key error')
       ) {
-        setErrorMessage('This email is already registered for early access');
+        setErrorMessage(
+          'Este correo electrónico ya está registrado para acceso anticipado'
+        );
       } else {
-        setErrorMessage('Something went wrong. Please try again later.');
+        setErrorMessage(
+          'Algo salió mal. Por favor intente nuevamente más tarde.'
+        );
       }
       form.reset({ email: '' });
       (document.activeElement as HTMLElement)?.blur();
@@ -54,18 +59,18 @@ export default function RequestAccess() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex border border-white/15 focus-within:border-white/30 rounded-full p-2 mt-8 relative'
+        className='flex flex-row gap-4 border ring-offset-background bg-white focus-within:border-black/30 p-4 mt-8 relative rounded-md max-w-2xl w-full'
       >
         <FormField
           control={form.control}
           name='email'
           render={({ field }) => (
-            <FormItem className='flex items-center bg-transparent'>
+            <FormItem className='flex items-center bg-transparent flex-1'>
               <FormControl className='flex items-center bg-transparent'>
-                <input
+                <Input
                   {...field}
                   placeholder='paradiso@gruplaconfiteria.com'
-                  className='bg-transparent px-4 border-none focus:border-none hover:border-none outline-none focus:outline-none text-white w-full md:min-w-[350px]'
+                  className='w-full'
                   onChange={(e) => {
                     field.onChange(e);
                     setErrorMessage(null);
@@ -82,11 +87,8 @@ export default function RequestAccess() {
             </FormItem>
           )}
         />
-        <Button
-          type='submit'
-          className='rounded-full bg-lime-400 hover:bg-lime-500 text-black py-2 px-4 text-sm'
-        >
-          Early Access
+        <Button type='submit' variant='lime'>
+          Acceso Anticipado
         </Button>
       </form>
     </Form>

@@ -29,7 +29,7 @@ export default function LogoTicker() {
   return (
     <section className='py-24 overflow-x-clip px-8'>
       <div className='container'>
-        <h4 className='text-center text-white/50 text-xl'>
+        <h4 className='text-center text-black/50 text-xl'>
           Already chosen by this market leaders
         </h4>
         <div className='flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]'>

@@ -1,7 +1,7 @@
 export const homeNavigation = [
-  { label: 'Features', href: '/#features' },
-  { label: 'Integrations', href: '/#integrations' },
-  { label: 'FAQs', href: '/#faqs' },
+  { label: 'Funcionalidades', href: '/#funcionalidades' },
+  { label: 'Integraciones', href: '/#integraciones' },
+  { label: 'Preguntas Freqüentes', href: '/#preguntas-frequentes' },
 ];
 
 export const navigation = [

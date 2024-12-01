@@ -9,29 +9,20 @@ import SectionTag from '@/components/marketing/SectionTag';
 
 const faqs = [
   {
-    question: 'How is Layers different from other design tools?',
+    question: '¿Cómo manejan la privacidad y seguridad de los datos?',
     answer:
-      'Unlike traditional design tools, Layers prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, reducing clicks and keeping you in your creative flow.',
+      'Tu privacidad es nuestra prioridad. Nunca compartimos ni vendemos tus datos a terceros. Toda la información se almacena de forma segura y encriptada en nuestros servidores, cumpliendo con los más altos estándares de seguridad y las regulaciones de protección de datos.',
   },
   {
-    question: 'Is there a learning curve?',
+    question:
+      '¿Necesito conocimientos técnicos especiales para usar la plataforma?',
     answer:
-      'Layers is designed to feel intuitive from day one. Most designers are productive within hours, not weeks. We also provide interactive tutorials and comprehensive documentation to help you get started.',
+      'No, nuestra plataforma está diseñada para ser intuitiva y fácil de usar. Contamos con una interfaz amigable y guías paso a paso que te ayudarán a aprovechar todas las funcionalidades sin necesidad de conocimientos técnicos previos. Además, nuestro equipo de soporte está siempre disponible para ayudarte.',
   },
   {
-    question: 'How do you handle version control?',
+    question: '¿Puedo integrar HagenSuite con otras plataformas o servicios?',
     answer:
-      'Every change in Layers is automatically saved and versioned. You can review history, restore previous versions, and create named versions for important milestones.',
-  },
-  {
-    question: 'Can I work offline?',
-    answer:
-      "Yes! Layers includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
-  },
-  {
-    question: 'How does Layers handle collaboration?',
-    answer:
-      'Layers is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.',
+      'Sí, HagenSuite está diseñado para ser altamente integrable. Ya contamos con integraciones nativas para las principales plataformas de reseñas como Google, TripAdvisor, Yelp y redes sociales. Si necesitas una integración personalizada, nuestro equipo técnico te ayudará a implementarla de manera rápida y eficiente. Contáctanos para discutir tus necesidades específicas.',
   },
 ];
 
@@ -39,23 +30,23 @@ export default function Faqs() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <section id='faqs' className='py-24 px-8'>
+    <section id='preguntas-frequentes' className='py-24 px-8'>
       <div className='container'>
         <div className='flex flex-col justify-center max-w-2xl'>
           <SectionTag>Faqs</SectionTag>
-          <h2 className='text-6xl font-medium text-center mt-6 text-white'>
-            Questions? We&apos;ve got{' '}
-            <span className='text-lime-400'>answers</span>
+          <h2 className='text-6xl font-medium text-center mt-6 font-display'>
+            ¿Preguntas? Tenemos{' '}
+            <span className='text-lime-400'>respuestas</span>
           </h2>
           <div className='mt-12 flex flex-col gap-6'>
             {faqs.map(({ question, answer }, index) => (
               <div
                 key={question}
-                className='bg-neutral-900 rounded-2xl border border-white/10 p-6 cursor-pointer hover:border-white/30'
+                className='bg-white border border-black/10 p-6 rounded-xl hover:border-black/30 cursor-pointer'
                 onClick={() => setSelectedIndex(index)}
               >
                 <div className='flex justify-between items-center gap-3'>
-                  <h3 className='font-medium text-white'>{question}</h3>
+                  <h3 className='font-medium'>{question}</h3>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'
@@ -83,7 +74,7 @@ export default function Faqs() {
                       exit={{ height: 0, marginTop: 0 }}
                       className='mt-6 overflow-hidden'
                     >
-                      <p className='text-white/50'>{answer}</p>
+                      <p className='text-black/50'>{answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -7,7 +7,7 @@ export default function SectionTag(props: HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h5
       className={twMerge(
-        'inline-flex border border-lime-400 text-lime-400 px-3 py-1 rounded-full uppercase text-sm mx-auto',
+        'inline-flex border border-lime-500 px-3 py-1 rounded-full uppercase text-sm mx-auto font-mono',
         className
       )}
       {...otherProps}

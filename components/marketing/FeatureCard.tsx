@@ -12,15 +12,15 @@ export default function FeatureCard(props: FeatureCardProps) {
   return (
     <div
       className={twMerge(
-        'bg-neutral-900 border border-white/10 p-6 rounded-3xl',
+        'bg-white border border-black/10 p-6 rounded-xl',
         className
       )}
       {...otherProps}
     >
       {children}
       <div>
-        <h3 className='text-white text-3xl font-medium mt-6'>{title}</h3>
-        <p className='text-white/50 mt-2'>{description}</p>
+        <h3 className='text-black text-3xl font-medium mt-6'>{title}</h3>
+        <p className='text-black/50 mt-2'>{description}</p>
       </div>
     </div>
   );
