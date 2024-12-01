@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 
 // Components
-import NavBar from '@/components/marketing/NavBar';
+// import NavBar from '@/components/marketing/NavBar';
+import NavBar from '@/components/marketing/NavBarTemporary';
 import Footer from '@/sections/Footer';
 
 interface MarketingLayoutProps {

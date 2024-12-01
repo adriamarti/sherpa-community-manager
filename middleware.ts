@@ -4,8 +4,8 @@ const pages = [
   '/',
   '/politicas-privacidad',
   '/terminos-condiciones',
-  '/sign-in(.*)',
-  '/sign-up(.*)',
+  // '/log-in(.*)',
+  // '/sign-up(.*)',
 ];
 const endpoints = ['/api/webhooks/clerk'];
 

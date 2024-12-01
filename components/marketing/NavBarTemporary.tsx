@@ -56,60 +56,47 @@ export default function NavBar() {
           ))}
         </div>
         {/* CTAs */}
-        <div className='flex justify-center items-center gap-4'>
-          <Link href='/log-in' className='hidden sm:block'>
-            <Button size='xs' variant='outline' disabled>
-              Log In
-            </Button>
-          </Link>
-          <Link href='/sign-up' className='hidden sm:block'>
-            <Button size='xs' variant='lime' disabled>
-              Sign Up
-            </Button>
-          </Link>
-          {/* Menu Button */}
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='black'
-            strokeWidth='2'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            className='feather feather-menu md:hidden'
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <line
-              x1='3'
-              y1='6'
-              x2='21'
-              y2='6'
-              className={twMerge(
-                'origin-left transition',
-                isOpen && 'rotate-45 -translate-y-1'
-              )}
-            ></line>
-            <line
-              x1='3'
-              y1='12'
-              x2='21'
-              y2='12'
-              className={twMerge('transition', isOpen && 'opacity-0')}
-            ></line>
-            <line
-              x1='3'
-              y1='18'
-              x2='21'
-              y2='18'
-              className={twMerge(
-                'origin-left transition',
-                isOpen && '-rotate-45 translate-y-1'
-              )}
-            ></line>
-          </svg>
-        </div>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='black'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          className='feather feather-menu md:hidden'
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <line
+            x1='3'
+            y1='6'
+            x2='21'
+            y2='6'
+            className={twMerge(
+              'origin-left transition',
+              isOpen && 'rotate-45 -translate-y-1'
+            )}
+          ></line>
+          <line
+            x1='3'
+            y1='12'
+            x2='21'
+            y2='12'
+            className={twMerge('transition', isOpen && 'opacity-0')}
+          ></line>
+          <line
+            x1='3'
+            y1='18'
+            x2='21'
+            y2='18'
+            className={twMerge(
+              'origin-left transition',
+              isOpen && '-rotate-45 translate-y-1'
+            )}
+          ></line>
+        </svg>
       </div>
       <AnimatePresence>
         {isOpen && (
@@ -125,18 +112,6 @@ export default function NavBar() {
                   {label}
                 </Link>
               ))}
-            </div>
-            <div className='flex justify-center items-center gap-4 w-full px-4'>
-              <Link href='/log-in' className='sm:block w-1/2'>
-                <Button size='xs' variant='outline' className='w-full'>
-                  Log In
-                </Button>
-              </Link>
-              <Link href='/sign-up' className='sm:block w-1/2'>
-                <Button size='xs' className='w-full'>
-                  Sign Up
-                </Button>
-              </Link>
             </div>
           </motion.div>
         )}
