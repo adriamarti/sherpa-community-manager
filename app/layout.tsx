@@ -22,9 +22,9 @@ const yeseva = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'HagerSuite',
+  title: 'HagenSuite',
   description:
-    'Plataforma de moderación de redes sociales impulsada por IA que ayuda a las empresas a gestionar contenido e interactuar con seguidores de manera eficiente y segura',
+    'Plataforma integral impulsada por IA que ayuda a las empresas a gestionar su reputación online, moderando reseñas, redes sociales y menciones para mejorar su imagen y relación con clientes de manera eficiente',
 };
 
 // export default function RootLayout({
