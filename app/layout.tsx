@@ -27,20 +27,36 @@ export const metadata: Metadata = {
     'Plataforma de moderación de redes sociales impulsada por IA que ayuda a las empresas a gestionar contenido e interactuar con seguidores de manera eficiente y segura',
 };
 
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   return (
+//     <ClerkProvider afterSignOutUrl='/'>
+//       <html lang='en'>
+//         <body
+//           className={`${geistSans.variable} ${geistMono.variable} ${yeseva.variable} antialiased`}
+//         >
+//           {children}
+//         </body>
+//       </html>
+//     </ClerkProvider>
+//   );
+// }
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider afterSignOutUrl='/'>
-      <html lang='en'>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${yeseva.variable} antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang='en'>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${yeseva.variable} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
   );
 }
