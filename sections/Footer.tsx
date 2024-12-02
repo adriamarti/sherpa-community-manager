@@ -5,7 +5,7 @@ import Link from 'next/link';
 import logoImage from '@/app/assets/images/logo.svg';
 
 const footerLinks = [
-  //   { href: '/contacto', label: 'Contacto' },
+  { href: 'mailto:contacto@hagensuite.com', label: 'Contacto' },
   { href: '/politicas-privacidad', label: 'Políticas de privacidad' },
   { href: '/terminos-condiciones', label: 'Términos y condiciones' },
 ];

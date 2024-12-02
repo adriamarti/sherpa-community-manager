@@ -26,6 +26,7 @@ const formSchema = z.object({
 });
 
 export default function RequestAccess() {
+  const [accessRequested, setAccessRequested] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,6 +38,7 @@ export default function RequestAccess() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await createEarlyAccess(values);
+      setAccessRequested(true);
     } catch (err) {
       if (
         err instanceof Error &&
@@ -55,6 +57,14 @@ export default function RequestAccess() {
     }
   };
 
+  if (accessRequested)
+    return (
+      <span className='p-4 mt-8 max-w-2xl w-full text-center text-lime-500'>
+        Gracias por mostrar interés, te avisaremos cuando la plataforma esté
+        activa y te recompensaremos por ser de los primeros
+      </span>
+    );
+
   return (
     <Form {...form}>
       <form
@@ -71,6 +81,7 @@ export default function RequestAccess() {
                   {...field}
                   placeholder='paradiso@gruplaconfiteria.com'
                   className='w-full'
+                  disabled={form.formState.isSubmitting}
                   onChange={(e) => {
                     field.onChange(e);
                     setErrorMessage(null);
@@ -87,7 +98,11 @@ export default function RequestAccess() {
             </FormItem>
           )}
         />
-        <Button type='submit' variant='lime'>
+        <Button
+          type='submit'
+          variant='lime'
+          disabled={form.formState.isSubmitting}
+        >
           Acceso Anticipado
         </Button>
       </form>
