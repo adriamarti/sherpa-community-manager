@@ -79,9 +79,9 @@ export default function RequestAccess() {
               </FormControl>
               <div className='absolute -bottom-8'>
                 {errorMessage ? (
-                  <span className='text-lime-400 text-sm'>{errorMessage}</span>
+                  <span className='text-red-500 text-sm'>{errorMessage}</span>
                 ) : (
-                  <FormMessage className='text-lime-400' />
+                  <FormMessage className='text-red-500 text-sm' />
                 )}
               </div>
             </FormItem>

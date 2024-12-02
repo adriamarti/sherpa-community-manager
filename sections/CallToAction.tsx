@@ -36,8 +36,8 @@ export default function CallToAction() {
                 key={index}
                 className='flex items-center gap-16 text-3xl md:text-6xl lg:text-7xl'
               >
-                <span className='text-lime-400 '>&#10038;</span>
-                <span className='text-black group-hover:text-lime-400'>
+                <span className='text-lime-500 '>&#10038;</span>
+                <span className='text-black group-hover:text-lime-500'>
                   Accede antes que nadie
                 </span>
               </div>

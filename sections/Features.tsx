@@ -111,7 +111,7 @@ export default function Features() {
                 key={feature}
                 className='bg-white inline-flex px-3 py-1.5 rounded-2xl gap-1.5 items-center'
               >
-                <span className='bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-sm'>
+                <span className='bg-lime-500 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-sm'>
                   &#10038;
                 </span>
                 <span className='font-medium text-black text-sm font-mono'>

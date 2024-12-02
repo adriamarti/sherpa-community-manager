@@ -58,7 +58,7 @@ export default function Integrations() {
             <SectionTag>Integraciones</SectionTag>
             <h2 className='text-4xl md:text-6xl font-medium mt-6 font-display'>
               Donde el poder se une a la{' '}
-              <span className='text-lime-400'>simplicidad</span>
+              <span className='text-lime-500'>simplicidad</span>
             </h2>
             <p className='text-lg text-black/50 mt-4'>
               Conéctate sin problemas con tus herramientas y plataformas
